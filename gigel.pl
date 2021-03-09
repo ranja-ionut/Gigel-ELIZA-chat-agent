@@ -45,8 +45,6 @@ has_nothing(rule(_, _, _, Emotion, Tag), rule(_, _, _, Emotion, Tag)) :- length(
 %
 % In Actions se vor intoarce actiunile de realizat de catre Gigel in
 % urma replicii (e.g. exit).
-%
-% Hint: min_score, ord_subset, find_matching_rules
 
 % select_answer/5
 % select_answer(+Tokens, +UserMemory, +BotMemory, -Answer, -Actions)
@@ -85,11 +83,6 @@ handle_actions(Actions) :- \+member(exit, Actions).
 % e.g
 % ?- find_occurrences(memory{'joc tenis': 3, 'ma uit la box': 2, 'ma uit la un film': 4}, Result).
 % Result = count{box:2, film:4, joc:3, la:6, ma:6, tenis:3, uit:6, un:4}.
-% Observați ca de exemplu cuvântul tenis are 3 apariți deoarce replica
-% din care face parte a fost spusă de 3 ori (are valoarea 3 în memorie).
-% Recomandăm pentru usurința să folosiți înca un dicționar în care să tineți
-% frecvențele cuvintelor, dar puteți modifica oricum structura, această funcție
-% nu este testată direct.
 
 % find_occurrences/2
 % find_occurrences(+UserMemory, -Result)
